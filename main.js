@@ -26,7 +26,14 @@ console.log(test);
 2. Crea una funzione chiamata logElements che prende un array e stampa in console ogni elemento utilizzando il metodo.forEach().
 
 
-3. Scrivi una funzione chiamata divide che prende due parametri, dividendo e divisore.Se il divisore è 0, genera un nuovo errore con il messaggio "Impossibile dividere per zero".Altrimenti, restituisci il risultato della divisione.
+let arrayProva = ["ciao a tutti", "sikdjd"];
+
+const logElements = (array) => {
+    array.forEach(element => console.log(element));
+}
+logElements(arrayProva);
+
+3. Scrivi una funzione chiamata divide che prende due parametri, dividendo e divisore. Se il divisore è 0, genera un nuovo errore con il messaggio "Impossibile dividere per zero".Altrimenti, restituisci il risultato della divisione.
 
 4. Scrivi una funzione processNumbers che prende un array, convalida che contenga solo numeri e restituisce un nuovo array con ogni numero elevato al quadrato.Se un elemento dell'array non è un numero, genera un errore indicando a quale indice si trova il valore non numerico.
 
@@ -35,11 +42,12 @@ console.log(test);
 6. Crea una funzione removeShortWords che prende un array di stringhe e una lunghezza minima.Dovrebbe restituire un nuovo array contenente solo le stringhe che sono più lunghe della lunghezza minima.Usa.filter() e assicurati che la funzione non tenga conto delle maiuscole e minuscole.
 */
 
-let arrayProva = ["ciao a tutti", "sikdjd"];
-
-const logElements = (array) => {
-    array.forEach((element) => {
-        console.log(element);
-    })
+const divide = function (dividendo, divisore) {
+    if (divisore === 0) {
+        throw new Error("Impossibile dividere per zero")
+    } else {
+        return dividendo / divisore;
+    }
 }
-logElements(arrayProva);
+const test = divide(10, 0);
+console.log(test)
