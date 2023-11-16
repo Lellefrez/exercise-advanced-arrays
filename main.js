@@ -75,8 +75,6 @@ console.log(test);
 
 5. Scrivi una funzione mapWithIndex che prende un array e restituisce un nuovo array in cui ogni elemento è una stringa che contiene l'elemento originale e il suo indice, formattato come "Elemento [indice]: [elemento]".
 
-6. Crea una funzione removeShortWords che prende un array di stringhe e una lunghezza minima.Dovrebbe restituire un nuovo array contenente solo le stringhe che sono più lunghe della lunghezza minima.Usa.filter() e assicurati che la funzione non tenga conto delle maiuscole e minuscole.
-*/
 
 
 const mapWithIndex = (array) => {
@@ -89,3 +87,17 @@ const squad = ["Juve", "Milan", "Inter", "Fiorentina"]
 const test = mapWithIndex(teams);
 
 console.log(test)
+
+
+6. Crea una funzione removeShortWords che prende un array di stringhe e una lunghezza minima.Dovrebbe restituire un nuovo array contenente solo le stringhe che sono più lunghe della lunghezza minima.Usa.filter() e assicurati che la funzione non tenga conto delle maiuscole e minuscole.
+*/
+
+const removeShortWords = (array, lungMin) => {
+    const arrayFiltrato = array.filter(stringa => stringa.length > lungMin);
+
+    return arrayFiltrato
+}
+const stringa = ["Juve", "Milan", "Inter", "Fiorentina", "Bolo"]
+
+const test = removeShortWords(stringa, 4);
+console.log(test);
