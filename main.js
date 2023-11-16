@@ -15,6 +15,18 @@ Repo: 'exercise-advanced-arrays'
 */
 
 const safeParseJSON = function (stringa) {
-    const oggetto = JSON.parse(stringa);
-    return oggetto
-}
+    let risultato = null;
+    try {
+        const oggetto = JSON.parse(stringa);
+        risultato = oggetto;
+        console.log("è stato un successo");
+    }
+    catch {
+        console.error("hai fallito");
+    }
+    return risultato
+};
+let stringaJSON = `["ciao a tutti", "sikdjd"]`;
+
+const test = safeParseJSON(stringaJSON);
+console.log(test);
