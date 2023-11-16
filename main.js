@@ -49,10 +49,6 @@ console.log(test)
 
 4. Scrivi una funzione processNumbers che prende un array, convalida che contenga solo numeri e restituisce un nuovo array con ogni numero elevato al quadrato. Se un elemento dell'array non è un numero, genera un errore indicando a quale indice si trova il valore non numerico.
 
-5. Scrivi una funzione mapWithIndex che prende un array e restituisce un nuovo array in cui ogni elemento è una stringa che contiene l'elemento originale e il suo indice, formattato come "Elemento [indice]: [elemento]".
-
-6. Crea una funzione removeShortWords che prende un array di stringhe e una lunghezza minima.Dovrebbe restituire un nuovo array contenente solo le stringhe che sono più lunghe della lunghezza minima.Usa.filter() e assicurati che la funzione non tenga conto delle maiuscole e minuscole.
-*/
 
 const processNumbers = (array) => {
 
@@ -75,3 +71,21 @@ const test = processNumbers(arrayProva);
 
 console.log(test);
 
+
+
+5. Scrivi una funzione mapWithIndex che prende un array e restituisce un nuovo array in cui ogni elemento è una stringa che contiene l'elemento originale e il suo indice, formattato come "Elemento [indice]: [elemento]".
+
+6. Crea una funzione removeShortWords che prende un array di stringhe e una lunghezza minima.Dovrebbe restituire un nuovo array contenente solo le stringhe che sono più lunghe della lunghezza minima.Usa.filter() e assicurati che la funzione non tenga conto delle maiuscole e minuscole.
+*/
+
+
+const mapWithIndex = (array) => {
+    const arrayMappato = array.map((elem, i) => {
+        return `Èlemento ${i}: ${elem}`;
+    })
+    return arrayMappato;
+}
+const squad = ["Juve", "Milan", "Inter", "Fiorentina"]
+const test = mapWithIndex(teams);
+
+console.log(test)
